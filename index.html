@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Pribadi Aqiel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @layer utilities {
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+    }
+  </style>
+  
+</head>
+<body class="bg-gray-100 text-gray-800">
+  
+<!-- Tombol WhatsApp Mengambang -->
+<a href="https://wa.me/62085865765469" target="_blank"
+   class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all z-50"
+   aria-label="Chat via WhatsApp">
+  <!-- Ikon WhatsApp (SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.8 11.8 0 0012 0 11.88 11.88 0 000 11.94a11.76 11.76 0 001.65 6.09L0 24l6.19-1.62A11.91 11.91 0 0012 24 11.87 11.87 0 0024 12.06a11.73 11.73 0 00-3.48-8.58zM12 21.64a9.65 9.65 0 01-4.93-1.32l-.35-.21-3.67.96 1-3.57-.23-.37a9.72 9.72 0 0115-11.44A9.66 9.66 0 0121.64 12 9.64 9.64 0 0112 21.64zm5.3-7.38c-.29-.14-1.74-.86-2-.96s-.46-.14-.66.14-.76.96-.93 1.16-.34.21-.62.07a7.79 7.79 0 01-2.28-1.41 8.57 8.57 0 01-1.59-2 .7.7 0 01.21-.94c.2-.21.48-.55.69-.83s.28-.48.42-.76a.77.77 0 00-.04-.76c-.13-.14-.66-1.59-.91-2.18s-.48-.5-.66-.5h-.57a1.1 1.1 0 00-.8.38 3.34 3.34 0 00-1 2.48 5.82 5.82 0 001.22 3.07 13.36 13.36 0 004.72 4.72c2.32 1.39 3.12 1.51 3.67 1.42a2.84 2.84 0 001.87-1.32 2.34 2.34 0 00.17-1.32c-.07-.13-.27-.21-.56-.35z"/>
+  </svg>
+</a>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Web Pribadi Aqiel</h1>
+
+      <!-- Hamburger Icon for small screens -->
+      <div class="lg:hidden">
+        <button data-collapse-toggle="navbar" type="button" class="text-gray-700 focus:outline-none" aria-controls="navbar" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar Links -->
+      <div class="hidden lg:flex space-x-4" id="navbar">
+        <a href="#about" class="hover:text-blue-500">Tentang</a>
+        <a href="#projects" class="hover:text-blue-500">Projek</a>
+        <a href="#contact" class="hover:text-blue-500">Kontak</a>
+        <a href="#certificate" class="hover:text-blue-500">Sertifikat</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Visible on small screens) -->
+    <div class="lg:hidden bg-white shadow p-4 space-y-4 hidden" id="mobile-menu">
+      <a href="#about" class="block text-gray-700 hover:text-blue-500">Tentang</a>
+      <a href="#projects" class="block text-gray-700 hover:text-blue-500">Projek</a>
+      <a href="#contact" class="block text-gray-700 hover:text-blue-500">Kontak</a>
+      <a href="#certificate" class="block text-gray-700 hover:text-blue-500">Sertifikat</a>
+    </div>
+  </nav>
+
+  <script>
+    // Menampilkan menu hamburger ketika tombol diklik
+    document.querySelector('[data-collapse-toggle="navbar"]').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  
+  <!-- Hero Section -->
+  <section class="container mx-auto text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">Halo, Saya Muhammad Aqiel Adhi Rajendra</h2>
+    <p class="text-lg mb-6">Selamat datang Di web pribadi Aqiel</p>
+    <a href="#projects" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">Lihat Project</a>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about" class="container mx-auto py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">Tentang Saya</h3>
+    <div class="max-w-4xl mx-auto text-center">
+      <p> Saya lulusan SMKN 6 Surakarta Jurusan Rekayasa Perangkat Lunak. Mempunyai keahlian Full Stack Developer, Pemrograman Game, Pembuatan aplikasi. Diluar Jurusan, saya memahami dasar-dasar digital marketing</p>
+    </div>
+    <!-- Penampil CV PDF -->
+    <div class="container mx-auto mt-16 px-4">
+    <div class="w-full h-[600px] border rounded-lg overflow-hidden shadow-lg">
+   <iframe src="pdf/cv2.pdf" class="w-full h-full" frameborder="0"></iframe>
+   </div>
+   </div>
+  </section>
+
+     
+
+  <!-- Projek -->
+  <section id="projects" class="bg-white py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">Projek Saya</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-4">
+      <!-- Card 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <h4 class="text-2xl font-semibold mb-2">WEB PPDB</h4>
+        <p class="mb-4">Di web PPDB ini saya menggunakan Realtime database pada firebase untuk menyimpan data dan storage untuk file gambarnya. Saya juga menggunakan Tailwindcss sebagai css nya dan js untuk function nya</p>
+        <a href="https://udinss13123214.github.io/PENDAFTARAN-PPDB---AQIEL/" class="text-blue-500 hover:underline">Lihat Detail</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <h4 class="text-2xl font-semibold mb-2">Aplikasi Android</h4>
+        <p class="mb-4">Kumpulan Project Aplikasi yang saya buat selama sekolah.</p>
+        <a href="https://drive.google.com/drive/folders/1IJRgte0KuIFjXUIYdj8ZHq4J7QUKCNhj" class="text-blue-500 hover:underline">Lihat Detail</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <h4 class="text-2xl font-semibold mb-2">Preview Aplikasi PPDB</h4>
+        <p class="mb-4">Priview aplikasi PPDB dapat mendaftar, metode eleminasi, CRUD</p>
+        <a href="https://youtube.com/shorts/IlDsvYQYHYA?feature=share" class="text-blue-500 hover:underline">Lihat Detail</a>
+      </div>
+    
+      <!-- Tambahkan lebih banyak projek -->
+    </div>
+  </section>
+
+<!-- Sertifikat Penghargaan -->
+<section id="certificate" class="container mx-auto py-20 px-4">
+  <h3 class="text-3xl font-bold text-center mb-10">Sertifikat Penghargaan</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+
+    <!-- Template Sertifikat -->
+<div class="flex flex-col items-center">
+  <!-- Thumbnail Terpotong -->
+  <div class="w-64 h-40 overflow-hidden rounded shadow mb-4">
+    <img src="pic/sertifosis.jpg" alt="Sertifikat OSIS" class="w-full h-full object-cover object-top">
+  </div>
+  <button onclick="document.getElementById('modal-osis').classList.remove('hidden')" 
+          class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
+    Preview
+  </button>
+  <a href="https://drive.google.com/drive/folders/1fDEEsqRH86dSimR0kjAiAwK35s4UPJHL" target="_blank" 
+     class="text-blue-500 hover:underline mt-2 text-sm">
+    Lihat di Google Drive
+  </a>
+</div>
+
+<div class="flex flex-col items-center">
+  <div class="w-64 h-40 overflow-hidden rounded shadow mb-4">
+    <img src="pic/sertifpkl.jpg" alt="Sertifikat PKL" class="w-full h-full object-cover object-top">
+  </div>
+  <button onclick="document.getElementById('modal-pkl').classList.remove('hidden')" 
+          class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
+    Preview
+  </button>
+  <a href="https://drive.google.com/drive/folders/1fDEEsqRH86dSimR0kjAiAwK35s4UPJHL" target="_blank" 
+     class="text-blue-500 hover:underline mt-2 text-sm">
+    Lihat di Google Drive
+  </a>
+</div>
+
+<div class="flex flex-col items-center">
+  <div class="w-64 h-40 overflow-hidden rounded shadow mb-4">
+    <img src="pic/sertiftoek.jpg" alt="Sertifikat TOEIC" class="w-full h-full object-cover object-top">
+  </div>
+  <button onclick="document.getElementById('modal-toek').classList.remove('hidden')" 
+          class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
+    Preview
+  </button>
+  <a href="https://drive.google.com/drive/folders/1fDEEsqRH86dSimR0kjAiAwK35s4UPJHL" target="_blank" 
+     class="text-blue-500 hover:underline mt-2 text-sm">
+    Lihat di Google Drive
+  </a>
+</div>
+
+
+  <!-- Modal Sertifikat OSIS -->
+<div id="modal-osis" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="relative w-[90%] max-w-4xl bg-white rounded-lg p-4">
+    <button onclick="document.getElementById('modal-osis').classList.add('hidden')" 
+            class="absolute top-2 right-4 text-5xl text-red-600 hover:text-red-400 font-bold cursor-pointer transition">
+      &times;
+    </button>
+    <img src="pic/sertifosis.jpg" alt="Sertifikat OSIS Full" class="w-full max-h-[80vh] object-contain rounded shadow">
+  </div>
+</div>
+
+<!-- Modal Sertifikat PKL -->
+<div id="modal-pkl" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="relative w-[90%] max-w-4xl bg-white rounded-lg p-4">
+    <button onclick="document.getElementById('modal-pkl').classList.add('hidden')" 
+            class="absolute top-2 right-4 text-5xl text-red-600 hover:text-red-400 font-bold cursor-pointer transition">
+      &times;
+    </button>
+    <img src="pic/sertifpkl.jpg" alt="Sertifikat PKL Full" class="w-full max-h-[80vh] object-contain rounded shadow">
+  </div>
+</div>
+
+<!-- Modal Sertifikat TOEIC -->
+<div id="modal-toek" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="relative w-[90%] max-w-4xl bg-white rounded-lg p-4">
+    <button onclick="document.getElementById('modal-toek').classList.add('hidden')" 
+            class="absolute top-2 right-4 text-5xl text-red-600 hover:text-red-400 font-bold cursor-pointer transition">
+      &times;
+    </button>
+    <img src="pic/sertiftoek.jpg" alt="Sertifikat TOEIC Full" class="w-full max-h-[80vh] object-contain rounded shadow">
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- Kontak -->
+<section id="contact" class="container mx-auto py-20 px-4">
+  <h3 class="text-3xl font-bold text-center mb-10">Kontak Saya</h3>
+  <div class="flex flex-col items-center justify-center gap-6">
+    
+    <!-- Foto Profil -->
+    <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+      <img src="pic/fotoku.jpg" alt="Foto Profil" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Info Kontak -->
+    <div class="text-center">
+      <p class="text-lg mb-4">Hubungi saya melalui:</p>
+      <div class="space-y-2">
+        <a href="https://wa.me/62085865765469" target="_blank" class="text-green-600 hover:underline block">
+          📱 WhatsApp: +62 0858-6576-5469
+        </a>
+        <a href="https://www.linkedin.com/in/m-aqiel-adhi-b19308312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:underline block">
+          💼 LinkedIn: M Aqiel Adhi
+        </a>
+        <a href="https://www.instagram.com/aqieladhir?igsh=NGYzbmJweHFsOWF1" target="_blank" class="text-pink-500 hover:underline block">
+          📸 Instagram: @aqieladhir
+        </a>
+        <p class="text-lg mt-4 font-semibold">📍 Alamat: </p>
+        <p class="text-gray-700">Kadipaten, Jl. Sawunggaling No.II, RT.01/RW.08, Pajang, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57146</p>
+        <p class="text-gray-700">Spanduk Cemal Cemol Rumah Warna Crem</p>
+        <div class="mt-2">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0746943082568!2d110.78608730674667!3d-7.566835645929376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15fcf24b1409%3A0x768c25d004f4c9b4!2sTPA%20Amanah%20Bunda!5e0!3m2!1sid!2sid!4v1746616697939!5m2!1sid!2sid"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-white mt-10">
+    <p>© 2025 Muhammad Aqiel Adhi Rajendra.</p>
+  </footer>
+
+</body>
+</html>
